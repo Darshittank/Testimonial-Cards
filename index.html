@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accordion · Pure jQuery</title>
+<link rel="stylesheet" href="css/style.css">  
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="accordion-wrapper">
+  <!-- decorative header (optional) -->
+  <div class="accordion-header">
+    <h2>FAQ · accordion</h2>
+  </div>
+
+  <!-- accordion component -->
+  <div class="accordion" id="mainAccordion">
+
+    <!-- item 1 -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="panel1">
+        <span>What is an accordion component?</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-panel" id="panel1" role="region">
+        <div class="accordion-content">
+          <p>An accordion is a vertically stacked list of items, such as questions or headings. Each item can be expanded or collapsed to reveal or hide associated content. Only one panel is typically open at a time, which keeps the interface compact and reduces visual clutter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- item 2 -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="panel2">
+        <span>How does the "single open" behavior work?</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-panel" id="panel2" role="region">
+        <div class="accordion-content">
+          <p>When you click a question, its answer expands. If another section was already open, it collapses automatically. This is often called an <strong>exclusive accordion</strong> or <strong>one-at-a-time</strong> pattern.</p>
+          <p>It improves readability and keeps the focus on the currently active topic.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- item 3 -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="panel3">
+        <span>Is it accessible with keyboard and screen readers?</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-panel" id="panel3" role="region">
+        <div class="accordion-content">
+          <p>Yes. We use semantic buttons with <code>aria-expanded</code> and <code>aria-controls</code>, plus region roles for panels. Keyboard navigation (Tab / Enter / Space) works natively. The icon is marked <code>aria-hidden="true"</code> because the state is already announced via <code>aria-expanded</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- item 4 -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="panel4">
+        <span>Can I open multiple sections at once?</span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-panel" id="panel4" role="region">
+        <div class="accordion-content">
+          <p>This particular accordion is designed for <strong>single-open</strong> behavior — only one panel remains expanded. If you need multiple open sections, you would remove the part of the jQuery that closes the previously active item.</p>
+          <p>But for many use cases (FAQs, settings, navigation) single-open is ideal.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="js/custom.js"></script>
+</body>
+</html>

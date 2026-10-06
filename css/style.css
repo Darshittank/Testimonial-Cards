@@ -1,0 +1,210 @@
+/* ---- base reset & background ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(145deg, #f5f7fc 0%, #e9eef5 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+/* ---- wrapper card ---- */
+.accordion-wrapper {
+  max-width: 760px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 2rem;
+  padding: 2rem 1.8rem;
+  box-shadow:
+    0 25px 40px -12px rgba(0, 20, 30, 0.25),
+    0 8px 18px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+/* optional heading */
+.accordion-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-left: 0.25rem;
+}
+
+.accordion-header h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1e2b3c;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.accordion-header h2::before {
+  content: "▍";
+  font-size: 2rem;
+  color: #2c7da0;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* ---- accordion list ---- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* ---- each accordion item ---- */
+.accordion-item {
+  background: #ffffff;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 12px rgba(0, 15, 30, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eaf0f6;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+  border-color: #cbd9e8;
+  box-shadow: 0 8px 18px rgba(20, 50, 80, 0.08);
+}
+
+/* ---- trigger button ---- */
+.accordion-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #1b2b3e;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease;
+  outline: none;
+  letter-spacing: -0.01em;
+  gap: 1rem;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 3px solid #2c7da0;
+  outline-offset: -3px;
+  border-radius: 1.3rem;
+}
+
+/* ---- plus / minus icon ---- */
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: #eef3f9;
+  border-radius: 50%;
+  color: #1e4a6b;
+  font-weight: 400;
+  transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1);
+  font-size: 1.3rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.accordion-icon::before {
+  content: "+";
+  display: block;
+  transform: translateY(-0.5px);
+}
+
+.accordion-item.active .accordion-icon {
+  background: #2c7da0;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.accordion-item.active .accordion-icon::before {
+  content: "−";
+}
+
+/* ---- panel (hidden by default) ---- */
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  background: #fafdff;
+  border-top: 1px solid transparent;
+}
+
+.accordion-content {
+  padding: 0 1.6rem 1.5rem 1.6rem;
+  color: #2d3f53;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  border-top: 1px solid #e7eef7;
+  margin-top: 0.2rem;
+  padding-top: 1.2rem;
+}
+
+.accordion-content p {
+  margin-bottom: 0.75rem;
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-item.active .accordion-trigger {
+  background: #f6faff;
+  color: #0f2c40;
+}
+
+.accordion-content code {
+  background: #e4ecf5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: #1e4a6b;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 500px) {
+  .accordion-wrapper {
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .accordion-trigger {
+    padding: 1rem 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .accordion-content {
+    padding: 0 1.2rem 1.3rem 1.2rem;
+    font-size: 0.98rem;
+  }
+
+  .accordion-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .accordion-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 1.2rem;
+  }
+}
