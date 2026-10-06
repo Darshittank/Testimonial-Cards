@@ -1,4 +1,4 @@
-# Accordion Pure jQuery.
+# Elegant Testimonials Slider — Dark Mode, Multi-Font & Accent Theming.
 
 [![GitHub stars](https://img.shields.io/github/stars/Darshittank/Accordion-pure-jQuery)](https://github.com/Darshittank/Accordion-pure-jQuery/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Darshittank/Accordion-pure-jQuery)](https://github.com/Darshittank/Accordion-pure-jQuery/network)
