@@ -10,7 +10,7 @@
 👉 **[View Elegant Testimonials Cards Now!](https://darshittank.github.io/Testimonial-Cards)** 👈
 
 ## 🗺️ Roadmap.sh Solution
-👉 **[View My Elegant Testimonials Cards](https://roadmap.sh/projects/accordion/solutions?u=6a54aaccace5f057736e8164)** 👈
+👉 **[View My Elegant Testimonials Cards] (https://roadmap.sh/projects/testimonial-cards/solutions?u=6a54aaccace5f057736e8164)** 👈
 
 ## 📌 Project Page
 👉 **[Testimonials Cards Project](https://roadmap.sh/projects/testimonial-cards)** 👈
