@@ -34,6 +34,7 @@ A production-ready testimonial carousel built with Slick Slider, featuring a ref
 ## 📸 Preview
 
 ![screenshot-Accordion](assets/screenshot-Testimonial-Cards.png)
+![screenshot-Accordion](assets/screenshot-Testimonial-Cards-light.png)
 
 📦 Use Cases
 - Websites & blogs
